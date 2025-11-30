@@ -1,0 +1,110 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #f8dadd; /* light pink */
+}
+
+header {
+    width: 100%;
+    padding: 15px 40px;
+    background: #f4c6c9; /* soft pink header background */
+    position: relative;
+}
+
+/* Top Header */
+.top-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+/* Logo */
+.logo img {
+    width: 60px;
+    border-radius: 50%;
+}
+
+/* Search Box */
+.search-box {
+    display: flex;
+    align-items: center;
+    background: #c5888c;
+    padding: 8px 15px;
+    border-radius: 30px;
+    width: 40%;
+}
+
+.search-box input {
+    border: none;
+    outline: none;
+    background: none;
+    width: 100%;
+    color: white;
+}
+
+.search-box input::placeholder {
+    color: #fce4e4;
+}
+
+.search-box i {
+    color: white;
+    margin-left: 10px;
+}
+
+/* Icons */
+.icons a {
+    margin-left: 15px;
+    text-decoration: none;
+    color: #7a3b40;
+    font-size: 14px;
+}
+
+.icons a i {
+    margin-right: 5px;
+}
+
+/* Navigation Bar */
+.nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    background: #b86f77;
+    padding: 12px;
+    border-radius: 20px;
+}
+
+.nav ul li {
+    margin: 0 25px;
+}
+
+.nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+}
+
+.menu-btn {
+    background: #8b4c58;
+    color: white;
+    padding: 5px 15px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+/* Hamburger (Mobile Only) */
+.hamburger {
+    display: none;
+    position: absolute;
+    right: 25px;
+    top: 20px;
+    flex-direction: column;
+    cursor: pointer;
+}
+

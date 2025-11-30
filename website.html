@@ -1,36 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta viewport="width=device-width, initial-scale=1.0">
-    <title>Website Header</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Resin Realm</title>
 
-    <!-- Linking CSS -->
-    <link rel="stylesheet" href="website.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-<!-- header page -->
-<header>
-    <div class="logo">MyWebsite</div>
 
+<header>
+    <div class="top-header">
+        <div class="logo">
+            <img src="logo.png" alt="Logo">
+        </div>
+
+        <!-- Search Box -->
+        <div class="search-box">
+            <input type="text" placeholder="Search for products">
+            <i class="fas fa-search"></i>
+        </div>
+
+        <!-- User Icons -->
+        <div class="icons">
+            <a href="#"><i class="fa-regular fa-user"></i> Account</a>
+            <a href="#"><i class="fa-solid fa-cart-shopping"></i> Cart</a>
+            <a href="#"><i class="fa-regular fa-heart"></i> Wishlist</a>
+        </div>
+    </div>
+
+    <!-- Navigation Menu -->
     <nav class="nav">
         <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><button class="menu-btn">MENU</button></li>
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">PRODUCTS</a></li>
+            <li><a href="#">ABOUT</a></li>
+            <li><a href="#">CONTACT</a></li>
         </ul>
     </nav>
 
+    <!-- Mobile Hamburger -->
     <div class="hamburger" onclick="toggleMenu()">
-        <span></span>
-        <span></span>
-        <span></span>
+        <span></span><span></span><span></span>
     </div>
 </header>
 
-<!-- Linking JS -->
-<script src="website.js"></script>
-
+<script src="script.js"></script>
 </body>
 </html>
