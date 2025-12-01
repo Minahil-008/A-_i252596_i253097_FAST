@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - The Resin Realm</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/checkout.css">
+</head>
+<body>
+     <!-- Header -->
+    <header class="header">
+        <div class="container-fluid">
+            <div class="row align-items-center">
+                <div class="col-md-3 d-flex align-items-center">
+                    <img src="/ai images/logo.png" alt="Logo" class="logo">
+                    <span class="site-name">The Resin Realm</span>
+                </div>
+                <div class="col-md-6">
+                    <div class="search-bar">
+                        <input type="text" placeholder="Search for products">
+                        <i class="fas fa-search"></i>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="header-icons">
+                        <a href="#" class="icon-link"><i class="fas fa-user"></i> Account</a>
+                        <a href="cart.html" class="icon-link">
+                            <i class="fas fa-shopping-cart"></i> Cart
+                            <span class="cart-count">2</span>
+                        </a>
+                        <a href="#" class="icon-link"><i class="fas fa-heart"></i> Wishlist</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="main-nav">
+        <div class="container">
+            <button class="menu-toggle">MENU:</button>
+            <ul class="nav-links">
+                <li><a href="home.html">HOME</a></li>
+                <li><a href="products.html">PRODUCTS</a></li>
+                <li><a href="#about">ABOUT</a></li>
+                <li><a href="#contact">CONTACT</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Checkout Content -->
+    <div class="container my-5">
+        <div class="row">
+            <div class="col-lg-7">
+                <!-- Shipping Address -->
+                <div class="checkout-section">
+                    <h2>Shipping address:</h2>
+                    <div class="address-display" id="addressDisplay">
+                        <p>xyz city xyz house street x</p>
+                    </div>
+                    <button class="btn-edit" onclick="editAddress()">Edit Address</button>
+                    
+                    <div class="address-form" id="addressForm" style="display: none;">
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <input type="text" class="form-control" id="firstName" placeholder="First Name" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <input type="text" class="form-control" id="lastName" placeholder="Last Name" required>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" class="form-control" id="address" placeholder="Street Address" required>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <input type="text" class="form-control" id="city" placeholder="City" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <input type="text" class="form-control" id="postalCode" placeholder="Postal Code" required>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <input type="tel" class="form-control" id="phone" placeholder="Phone Number" required>
+                        </div>
+                        <button class="btn-save" onclick="saveAddress()">Save Address</button>
+                    </div>
+                </div>
+
+                <!-- Payment Method -->
+                <div class="checkout-section">
+                    <h2>Payment method:</h2>
+                    <div class="payment-options">
+                        <label class="payment-option">
+                            <input type="radio" name="payment" value="COD" checked>
+                            <span>COD</span>
+                        </label>
+                        <label class="payment-option">
+                            <input type="radio" name="payment" value="Paypal">
+                            <span>Paypal</span>
+                        </label>
+                        <label class="payment-option">
+                            <input type="radio" name="payment" value="Debit">
+                            <span>Debit</span>
+                        </label>
+                        <label class="payment-option">
+                            <input type="radio" name="payment" value="Apple Pay">
+                            <span>Apple Pay</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-5">
+                <!-- Order Summary -->
+                <div class="order-summary">
+                    <h2>Total payment:</h2>
+                    
+                    <div class="order-items" id="orderItems">
+                        <!-- Order items will be dynamically loaded -->
+                    </div>
+                    
+                    <div class="price-breakdown">
+                        <div class="price-row">
+                            <span>Product cost:</span>
+                            <span id="productCost">PKR 0.00</span>
+                        </div>
+                        <div class="price-row">
+                            <span>Sales Tax:</span>
+                            <span id="salesTax">PKR 0.00</span>
+                        </div>
+                        <div class="price-row">
+                            <span>DG:</span>
+                            <span id="dg">PKR 0.00</span>
+                        </div>
+                        <div class="price-row">
+                            <span>Total:</span>
+                            <span id="finalTotal">PKR 0.00</span>
+                        </div>
+                    </div>
+                    
+                    <button class="btn-confirm" id="confirmOrderBtn">ORDER CONFIRM?</button>
+                </div>
+
+                <div class="action-buttons-bottom">
+                    <button class="btn-faq">FAQ'S?</button>
+                    <button class="btn-continue" onclick="window.location.href='products.html'">Continue shopping?</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>resinrealm@gmail.com</p>
+            <p>&copy; 2024 The Resin Realm. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+    <script src="js/checkout.js"></script>
+</body>
+</html>

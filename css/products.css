@@ -161,7 +161,7 @@ body {
 /* PRODUCT CARDS */
 .product-card {
     background-color: #A95D73;
-    border-radius: 100px;
+    border-radius: 50px;
     padding: 20px;
     text-align: center;
 
@@ -176,7 +176,7 @@ body {
     width: 100%;
     height: 350px;
     object-fit: cover;
-    border-radius: 120px;
+    border-radius: 100px;
     margin-bottom: 15px;
     flex-shrink: 0;
 }
@@ -231,16 +231,16 @@ body {
     margin-top: auto !important;
 }
 
+
 .btn-add-cart {
-    background-color: #320B0B;
-    color: #FFDAE4;
+    background-color: #A95D73;
+    color: #1F1717;
     border: none;
     padding: 10px 20px;
-    border-radius: 40px;
+    border-radius: 20px;
     cursor: pointer;
+    width: 100%;
     transition: background-color 0.3s;
-    width: 70%;
-    margin-top: auto;
 }
 
 .btn-add-cart:hover {
