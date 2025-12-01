@@ -43,7 +43,10 @@ function saveAddress() {
 
 // Load Order Items
 function loadOrderItems() {
+
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    console.log("Loaded order items:", cart);   //console log
+
     const orderItemsContainer = document.getElementById('orderItems');
     
     if (cart.length === 0) {
@@ -80,7 +83,8 @@ function updatePriceBreakdown() {
     const salesTax = Math.round(productCost * 0.015); // 1.5% tax
     const dg = 500; // Delivery charge
     const finalTotal = productCost + salesTax + dg;
-    
+    console.log("Price breakdown:", { productCost, salesTax, dg, finalTotal });   //  Console Log #2
+
     document.getElementById('productCost').textContent = 'PKR ' + productCost.toLocaleString() + '.00';
     document.getElementById('salesTax').textContent = 'PKR ' + salesTax.toLocaleString() + '.00';
     document.getElementById('dg').textContent = 'PKR ' + dg.toLocaleString() + '.00';
@@ -89,7 +93,11 @@ function updatePriceBreakdown() {
 
 // Confirm Order Button
 document.getElementById('confirmOrderBtn').addEventListener('click', function() {
+
+    console.log("Confirm order clicked");   //  Console Log #3
+
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
     
     if (cart.length === 0) {
         alert('Your cart is empty! Please add items before placing an order.');
