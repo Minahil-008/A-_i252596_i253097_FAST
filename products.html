@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - The Resin Realm</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/products.css">
+</head>
+<body>
+   <!-- Header -->
+    <header class="header">
+        <div class="container-fluid">
+            <div class="row align-items-center">
+                <div class="col-md-3 d-flex align-items-center">
+                    <img src="/ai images/logo.png" alt="Logo" class="logo">
+                    <span class="site-name">The Resin Realm</span>
+                </div>
+                <div class="col-md-6">
+                    <div class="search-bar">
+                        <input type="text" placeholder="Search for products">
+                        <i class="fas fa-search"></i>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="header-icons">
+                        <a href="#" class="icon-link"><i class="fas fa-user"></i> Account</a>
+                        <a href="cart.html" class="icon-link">
+                            <i class="fas fa-shopping-cart"></i> Cart
+                            <span class="cart-count">2</span>
+                        </a>
+                        <a href="#" class="icon-link"><i class="fas fa-heart"></i> Wishlist</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="main-nav">
+        <div class="container">
+            <button class="menu-toggle">MENU:</button>
+            <ul class="nav-links">
+                <li><a href="home.html">HOME</a></li>
+                <li><a href="products.html" class="active">PRODUCTS</a></li>
+                <li><a href="#about">ABOUT</a></li>
+                <li><a href="#contact">CONTACT</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Product Gallery -->
+    <div class="container my-5">
+        <h1 class="page-title">GALLERY</h1>
+        
+        <!-- Filter Section -->
+        <div class="filter-section">
+            <label for="artistFilter">Filter by Artist:</label>
+            <select id="artistFilter" class="form-select">
+                <option value="all">All Artists</option>
+                <option value="sarah">Sarah Ahmed</option>
+                <option value="Alina">Alina Shehzad</option>
+                <option value="fatima">Fatima Khan</option>
+            </select>
+            
+            <label for="sortFilter" class="ms-4">Sort by:</label>
+            <select id="sortFilter" class="form-select">
+                <option value="default">Default</option>
+                <option value="price-low">Price: Low to High</option>
+                <option value="price-high">Price: High to Low</option>
+                <option value="popularity">Popularity</option>
+            </select>
+        </div>
+
+        <!-- Products Grid -->
+        <div class="row" id="productsGrid">
+            <div class="col-md-3 col-sm-6 mb-4 product-item" data-artist="sarah" data-price="5000">
+                <div class="product-card">
+                    <img src="ai images/watch.jpeg" alt="">
+                    <div class="rating">★★★★★</div>
+                    <h3>Luxurious resin watch</h3>
+                    <p class="artist-name">By Sarah Ahmed</p>
+                    <p class="price">PKR 5,000.00</p>
+                    <button class="btn-add-cart" data-name="Luxurious resin clock" data-price="5000" data-artist="Sarah Ahmed"><i class="fas fa-shopping-cart"></i> Add to cart</button>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6 mb-4 product-item" data-artist="ali" data-price="10000">
+                <div class="product-card">
+                    <img src="ai images/nikkah slab.jpeg" alt="">
+                    <div class="rating">★★★★★</div>
+                    <h3>Pastel nikkah slab</h3>
+                    <p class="artist-name">By Alina Shehzad</p>
+                    <p class="price">PKR 10,000.00</p>
+                    <button class="btn-add-cart" data-name="Pastel nikkah slab" data-price="10000" data-artist="Alina Shehzad"><i class="fas fa-shopping-cart"></i> Add to cart</button>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6 mb-4 product-item" data-artist="fatima" data-price="7000">
+                <div class="product-card">
+                    <img src="ai images/quranStand.jpeg" alt="">
+                    <div class="rating">★★★★★</div>
+                    <h3>Quran stand</h3>
+                    <p class="artist-name">By Fatima Khan</p>
+                    <p class="price">PKR 7,000.00</p>
+                    <button class="btn-add-cart" data-name="Quran stand" data-price="7000" data-artist="Fatima Khan"><i class="fas fa-shopping-cart"></i> Add to cart</button>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6 mb-4 product-item" data-artist="sarah" data-price="3000">
+                <div class="product-card">
+                    <img src="ai images/bracelet.jpeg" alt="">
+                    <div class="rating">★★★★★</div>
+                    <h3>Luxurious sea blue bracelet</h3>
+                    <p class="artist-name">By Sarah Ahmed</p>
+                    <p class="price">PKR 3,000.00</p>
+                    <button class="btn-add-cart" data-name="Luxurious sea blue bracelet" data-price="3000" data-artist="Sarah Ahmed"><i class="fas fa-shopping-cart"></i> Add to cart</button>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6 mb-4 product-item" data-artist="ali" data-price="2500">
+                <div class="product-card">
+                    <img src="ai images/keychain.jpeg" alt="">
+                    <div class="rating">★★★★★</div>
+                    <h3>Rose pink keychain</h3>
+                    <p class="artist-name">By Alina Shehzad</p>
+                    <p class="price">PKR 2,500.00</p>
+                    <button class="btn-add-cart" data-name="Rose pink keychain" data-price="2500" data-artist="Alina Shehzad"><i class="fas fa-shopping-cart"></i> Add to cart</button>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6 mb-4 product-item" data-artist="fatima" data-price="4000">
+                <div class="product-card">
+                    <img src="ai images/heart decorations.jpeg" alt="">
+                    <div class="rating">★★★★★</div>
+                    <h3>Heart decorations</h3>
+                    <p class="artist-name">By Fatima Khan</p>
+                    <p class="price">PKR 4,000.00</p>
+                    <button class="btn-add-cart" data-name="Marble coasters set" data-price="4000" data-artist="Fatima Khan"><i class="fas fa-shopping-cart"></i> Add to cart</button>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6 mb-4 product-item" data-artist="sarah" data-price="5500">
+                <div class="product-card">
+                    <img src="ai images/tray.jpeg" alt="">
+                    <div class="rating">★★★★★</div>
+                    <h3>Ocean theme tray</h3>
+                    <p class="artist-name">By Sarah Ahmed</p>
+                    <p class="price">PKR 5,500.00</p>
+                    <button class="btn-add-cart" data-name="Ocean theme tray" data-price="5500" data-artist="Sarah Ahmed"><i class="fas fa-shopping-cart"></i> Add to cart</button>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6 mb-4 product-item" data-artist="ali" data-price="8500">
+                <div class="product-card">
+                    <img src="ai images/pendant.jpeg" alt="">
+                    <div class="rating">★★★★★</div>
+                    <h3>Pendant</h3>
+                    <p class="artist-name">By Alina Shehzad</p>
+                    <p class="price">PKR 8,500.00</p>
+                    <button class="btn-add-cart" data-name="Agate tissue box" data-price="8500" data-artist="Alina Shehzad"><i class="fas fa-shopping-cart"></i> Add to cart</button>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6 mb-4 product-item" data-artist="fatima" data-price="3500">
+                <div class="product-card">
+                    <img src="ai images/ring.jpeg" alt="">
+                    <div class="rating">★★★★★</div>
+                    <h3>Blue resin ring</h3>
+                    <p class="artist-name">By Fatima Khan</p>
+                    <p class="price">PKR 3,500.00</p>
+                    <button class="btn-add-cart" data-name="Blue resin ring" data-price="3500" data-artist="Fatima Khan"><i class="fas fa-shopping-cart"></i> Add to cart</button>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6 mb-4 product-item" data-artist="sarah" data-price="1000">
+                <div class="product-card">
+                    <img src="ai images/earrings.jpeg" alt="">
+                    <div class="rating">★★★★★</div>
+                    <h3>Blue resin earrings</h3>
+                    <p class="artist-name">By Sarah Ahmed</p>
+                    <p class="price">PKR 1,000.00</p>
+                    <button class="btn-add-cart" data-name="Blue resin earrings" data-price="1000" data-artist="Sarah Ahmed"><i class="fas fa-shopping-cart"></i> Add to cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>resinrealm@gmail.com</p>
+            <p>&copy; 2024 The Resin Realm. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+    <script src="js/products.js"></script>
+</body>
+</html>
